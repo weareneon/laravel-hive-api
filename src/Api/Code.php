@@ -2,6 +2,10 @@
 
 namespace FWM\Hive\Api;
 
+/**
+ * Class Code
+ * @package FWM\Hive\Api
+ */
 class Code extends AbstractApi
 {
     /**

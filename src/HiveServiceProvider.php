@@ -4,6 +4,10 @@ namespace FWM\Hive;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class HiveServiceProvider
+ * @package FWM\Hive
+ */
 class HiveServiceProvider extends ServiceProvider
 {
 

@@ -5,6 +5,10 @@ namespace FWM\Hive;
 use Carling\Hive\Api\Code;
 use Carling\Hive\Api\User;
 
+/**
+ * Class Client
+ * @package FWM\Hive
+ */
 class Client
 {
 

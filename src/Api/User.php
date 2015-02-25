@@ -2,6 +2,10 @@
 
 namespace FWM\Hive\Api;
 
+/**
+ * Class User
+ * @package FWM\Hive\Api
+ */
 class User extends AbstractApi
 {
     /**
@@ -13,6 +17,10 @@ class User extends AbstractApi
         return $this->post('/api/user/', ['user' => $data]);
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function get($id)
     {
         return $this->get('/api/user/' . $id . '/');

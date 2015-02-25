@@ -4,6 +4,10 @@ namespace FWM\Hive\Api;
 
 use GuzzleHttp\Client;
 
+/**
+ * Class AbstractApi
+ * @package FWM\Hive\Api
+ */
 class AbstractApi
 {
 
