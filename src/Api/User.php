@@ -8,12 +8,12 @@ class User extends AbstractApi
      * @param array $data
      * @return array|string
      */
-    public function createUser($data)
+    public function create($data)
     {
         return $this->post('/api/user/', ['user' => $data]);
     }
 
-    public function getUser($id)
+    public function get($id)
     {
         return $this->get('/api/user/' . $id . '/');
     }
@@ -33,7 +33,7 @@ class User extends AbstractApi
      * @param array $params
      * @return \GuzzleHttp\Stream\StreamInterface|null
      */
-    public function userCodeEntry($userId, $params = array())
+    public function codeEntry($userId, $params = array())
     {
         return $this->get('/api/user/' . $userId . '/codeentry/', $params);
     }
