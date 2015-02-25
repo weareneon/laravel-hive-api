@@ -1,0 +1,25 @@
+{
+    "name": "fastwebmedia/hive-api",
+    "description": "A wrapper around Hive API.",
+    "keywords": [
+      "hive",
+      "api"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fast Web Media",
+            "email": "hello@fastweb.media"
+        }
+    ],
+    "require": {
+      "php": ">=5.4.0",
+      "guzzlehttp/guzzle": "5.2.*",
+      "illuminate/support": "5.*"
+    },
+    "psr-4": {
+      "FWM\\Hive\\": "src/Hive/"
+    },
+    "minimum-stability": "stable"
+
+}
