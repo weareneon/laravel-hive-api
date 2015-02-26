@@ -1,5 +1,7 @@
 # Hive API Package
 
+[![Build Status](https://travis-ci.org/fastwebmedia/laravel-hive-api.svg?branch=master)](https://travis-ci.org/fastwebmedia/laravel-hive-api)
+
 ## Install
 
 ```
