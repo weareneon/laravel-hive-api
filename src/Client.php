@@ -4,6 +4,7 @@ namespace FWM\Hive;
 
 use FWM\Hive\Api\Code;
 use FWM\Hive\Api\User;
+use InvalidArgumentException;
 
 /**
  * Class Client
@@ -15,7 +16,7 @@ class Client
     /**
      * @param $name
      * @return Code|User
-     * @throws \Exception
+     * @throws InvalidArgumentException
      */
     public function api($name)
     {
@@ -28,7 +29,7 @@ class Client
                 break;
 
             default:
-                throw new \Exception(sprintf('Undefined api instance called: "%s"', $name));
+                throw new InvalidArgumentException(sprintf('Undefined api instance called: "%s"', $name));
         }
 
         return $api;
