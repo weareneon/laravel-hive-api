@@ -17,8 +17,10 @@
       "guzzlehttp/guzzle": "5.2.*",
       "illuminate/support": "5.*"
     },
-    "psr-4": {
-      "FWM\\Hive\\": "src/Hive/"
+    "autoload": {
+      "psr-4": {
+        "FWM\\Hive\\": "src/"
+      }
     },
     "minimum-stability": "stable"
 
