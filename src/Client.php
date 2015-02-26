@@ -2,8 +2,8 @@
 
 namespace FWM\Hive;
 
-use Carling\Hive\Api\Code;
-use Carling\Hive\Api\User;
+use FWM\Hive\Api\Code;
+use FWM\Hive\Api\User;
 
 /**
  * Class Client
