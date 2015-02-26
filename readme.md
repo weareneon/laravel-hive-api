@@ -17,7 +17,7 @@ You then need to add the service provider
 Finally publised the config 
 
 ```
-artisan vendor:publish
+php artisan vendor:publish
 ```    
 
 ## Usage
