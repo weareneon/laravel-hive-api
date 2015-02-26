@@ -8,8 +8,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Fast Web Media",
-            "email": "hello@fastweb.media"
+            "name": "Fast Web Media Ltd",
+            "email": "packages@fastweb.media"
         }
     ],
     "require": {
@@ -17,11 +17,13 @@
       "guzzlehttp/guzzle": "5.2.*",
       "illuminate/support": "5.*"
     },
+    "require-dev": {
+      "phpunit/phpunit": "4.*"
+    },
     "autoload": {
       "psr-4": {
         "FWM\\Hive\\": "src/"
       }
     },
     "minimum-stability": "stable"
-
 }
