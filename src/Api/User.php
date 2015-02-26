@@ -21,7 +21,7 @@ class User extends AbstractApi
      * @param $id
      * @return mixed
      */
-    public function get($id)
+    public function getUser($id)
     {
         return $this->get('/api/user/' . $id . '/');
     }
