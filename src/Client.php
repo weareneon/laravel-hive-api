@@ -7,25 +7,26 @@ use FWM\Hive\Api\User;
 use InvalidArgumentException;
 
 /**
- * Class Client
- * @package FWM\Hive
+ * Class Client.
  */
 class Client
 {
-
     /**
      * @param $name
+     * @param $url
+     *
      * @return Code|User
+     *
      * @throws InvalidArgumentException
      */
-    public function api($name)
+    public function api($name, $url)
     {
         switch ($name) {
             case 'user':
-                $api = new User($this);
+                $api = new User($url);
                 break;
             case 'code':
-                $api = new Code($this);
+                $api = new Code($url);
                 break;
 
             default:

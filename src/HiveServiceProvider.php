@@ -5,16 +5,12 @@ namespace FWM\Hive;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class HiveServiceProvider
- * @package FWM\Hive
+ * Class HiveServiceProvider.
  */
 class HiveServiceProvider extends ServiceProvider
 {
-
     /**
      * Boot the service provider.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -23,20 +19,16 @@ class HiveServiceProvider extends ServiceProvider
 
     /**
      * Setup the config.
-     *
-     * @return void
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__ . '/../config/hive.php');
+        $source = realpath(__DIR__.'/../config/hive.php');
         $this->publishes([$source => config_path('hive.php')]);
         $this->mergeConfigFrom($source, 'hive');
     }
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {

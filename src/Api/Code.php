@@ -3,13 +3,26 @@
 namespace FWM\Hive\Api;
 
 /**
- * Class Code
- * @package FWM\Hive\Api
+ * Class Code.
  */
 class Code extends AbstractApi
 {
     /**
+     * @var
+     */
+    protected $url;
+
+    /**
+     * @param $url
+     */
+    public function __construct($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
      * @param $code
+     *
      * @return string
      */
     public function getCode($code)
@@ -19,6 +32,7 @@ class Code extends AbstractApi
 
     /**
      * @param $audit
+     *
      * @return \GuzzleHttp\Stream\StreamInterface|null
      */
     public function getAudit($audit)

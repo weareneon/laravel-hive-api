@@ -5,12 +5,10 @@ namespace FWM\Hive\Api;
 use GuzzleHttp\Client;
 
 /**
- * Class AbstractApi
- * @package FWM\Hive\Api
+ * Class AbstractApi.
  */
 class AbstractApi
 {
-
     /**
      * @var
      */
@@ -26,17 +24,20 @@ class AbstractApi
 
     /**
      * @param $perPage
+     *
      * @return $this
      */
     public function setPerPage($perPage)
     {
-        $this->perPage = (null === $perPage ? $perPage : (int)$perPage);
+        $this->perPage = (null === $perPage ? $perPage : (int) $perPage);
+
         return $this;
     }
 
     /**
      * @param $path
      * @param array $parameters
+     *
      * @return \GuzzleHttp\Stream\StreamInterface|null
      */
     protected function get($path, $parameters = array())
@@ -53,6 +54,7 @@ class AbstractApi
     /**
      * @param $path
      * @param array $parameters
+     *
      * @return \GuzzleHttp\Stream\StreamInterface|null
      */
     protected function post($path, array $parameters = array())
@@ -68,11 +70,11 @@ class AbstractApi
     public function getHttp()
     {
         $client = new Client([
-            'base_url' => [config('hive.url'), []],
+            'base_url' => [$this->url, []],
             'defaults' => [
                 'headers' => ['Content-Type' => 'application/json'],
                 'query'   => ['api_key' => config('hive.token')],
-            ]
+            ],
         ]);
 
         return $client;
