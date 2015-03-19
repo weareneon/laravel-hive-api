@@ -73,7 +73,7 @@ class AbstractApi
             'base_url' => [$this->url, []],
             'defaults' => [
                 'headers' => ['Content-Type' => 'application/json'],
-                'query'   => ['api_key' => config('hive.token')],
+                'query'   => ['api_key' => $this->token],
             ],
         ]);
 

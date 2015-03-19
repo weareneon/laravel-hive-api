@@ -14,19 +14,20 @@ class Client
     /**
      * @param $name
      * @param $url
+     * @param $token
      *
      * @return Code|User
      *
      * @throws InvalidArgumentException
      */
-    public function api($name, $url)
+    public function api($name, $url, $token)
     {
         switch ($name) {
             case 'user':
-                $api = new User($url);
+                $api = new User($url, $token);
                 break;
             case 'code':
-                $api = new Code($url);
+                $api = new Code($url, $token);
                 break;
 
             default:

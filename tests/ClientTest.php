@@ -9,7 +9,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $client = new Client();
 
-        $this->assertInstanceOf('FWM\Hive\Api\Code', $client->api('code', 'fastwebmedia'));
+        $this->assertInstanceOf('FWM\Hive\Api\Code', $client->api('code', 'fastwebmedia', 'token'));
     }
 
     /** @test * */
@@ -17,7 +17,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $client = new Client();
 
-        $this->assertInstanceOf('FWM\Hive\Api\User', $client->api('user', 'fastwebmedia'));
+        $this->assertInstanceOf('FWM\Hive\Api\User', $client->api('user', 'fastwebmedia', 'token'));
     }
 
     /** @test **/
@@ -26,6 +26,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException');
 
         $client = new Client();
-        $client->api('foobarbaz', 'fastwebmedia');
+        $client->api('foobarbaz', 'fastwebmedia', 'token');
     }
 }

@@ -5,26 +5,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | API URL
+    | Hive Campaigns
     |--------------------------------------------------------------------------
     |
-    | Here you should add the URL to connect to the Hive Api.
+    | Each campaign should have a route and a token.
     |
     */
 
-    'url'   => [
-        'api-key' => 'api-route'
+    'unique-hive-campaign' => [
+        'route' => 'api-route',
+        'token' => 'api-token',
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | API Token
-    |--------------------------------------------------------------------------
-    |
-    | Here you should add the API token.
-    |
-    */
-
-    'token' => ''
 
 ];

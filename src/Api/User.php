@@ -13,11 +13,18 @@ class User extends AbstractApi
     protected $url;
 
     /**
-     * @param $url
+     * @var
      */
-    public function __construct($url)
+    protected $token;
+
+    /**
+     * @param $url
+     * @param $token
+     */
+    public function __construct($url, $token)
     {
         $this->url = $url;
+        $this->token = $token;
     }
 
     /**
