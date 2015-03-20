@@ -3,6 +3,7 @@
 namespace FWM\Hive\Api;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * Class AbstractApi.
@@ -46,9 +47,9 @@ class AbstractApi
             $parameters['page'] = $this->perPage;
         }
 
-        $response = $this->getHttp()->get($path, [], $parameters);
+        $response = $this->getHttp()->get($path, $parameters);
 
-        return $response->getBody();
+        return $response->json();
     }
 
     /**
@@ -59,7 +60,13 @@ class AbstractApi
      */
     protected function post($path, array $parameters = array())
     {
-        $response = $this->getHttp()->createRequest('POST', $path, ['json' => $parameters]);
+        try {
+            $request = $this->getHttp()->createRequest('POST', $path, ['json' => $parameters]);
+
+            $response = $this->getHttp()->send($request);
+        } catch (RequestException $e) {
+            return $e;
+        }
 
         return $response->getBody();
     }
